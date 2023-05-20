@@ -1,0 +1,6 @@
+site_name: wiki
+nav:
+  - index: index.md
+  - index1: index1.md
+theme:
+  name: material

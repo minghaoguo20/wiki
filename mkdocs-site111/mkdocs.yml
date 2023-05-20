@@ -1,0 +1,9 @@
+site_name: wiki
+nav:
+  - cv:
+    - NeRF: cv/nerf.md
+  - python:
+    - function: python/function.md
+  - index: index.md
+theme:
+  name: material
