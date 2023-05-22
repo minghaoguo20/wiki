@@ -10,3 +10,8 @@ NeRFs 依赖于一种古老而优雅的概念，称为光场或辐射场。
 
 因此，标准的 NeRF 是一个形式为 $F:(x,d) -> (c,σ)$ 的函数。
 
+![nerf](https://www.researchgate.net/publication/348213072/figure/fig4/AS:976456033267712@1609816668013/NeTF-network-architecture-we-adopt-an-MLP-structure-analogous-to-the-one-used-in-NeRF.png)
+
+![nerf](https://miro.medium.com/max/9999/1*q3fLvJFfoUdtVhsXeeTNXw.png)
+
+[白話Neural Radiance Fields (NeRF): 類神經網路在View Synthesis的熱門新方向](https://medium.com/ai-blog-tw/%E7%99%BD%E8%A9%B1neural-radiance-fields-nerf-%E9%A1%9E%E7%A5%9E%E7%B6%93%E7%B6%B2%E8%B7%AF%E5%9C%A8view-synthesis%E7%9A%84%E7%86%B1%E9%96%80%E6%96%B0%E6%96%B9%E5%90%91-23be9411d399)

@@ -4,7 +4,7 @@ nav:
   - cv:
     - nerf: cv/nerf.md
   - python:
-    - function: python/function.md
+    - syntax: python/syntax.md
   - index: index.md
 
 theme:
