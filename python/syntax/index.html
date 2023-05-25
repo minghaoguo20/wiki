@@ -12,7 +12,7 @@
         <link rel="prev" href="../../cv/nerf/">
       
       
-        <link rel="next" href="../..">
+        <link rel="next" href="../../macos/gpu/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
@@ -344,10 +344,66 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decorator" class="md-nav__link">
+    decorator
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          macos
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          macos
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../macos/gpu/" class="md-nav__link">
+        gpu
+      </a>
     </li>
   
 
@@ -453,6 +509,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#decorator" class="md-nav__link">
+    decorator
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -526,6 +589,42 @@ print(product) # 120
 <li>等同于<code>pass</code></li>
 <li>Numpy中可以用来选数据</li>
 </ol>
+<h2 id="decorator">decorator</h2>
+<p><a href="https://www.bilibili.com/video/BV11s411V7Dt">【Python小技巧：装饰器(Decorator)】</a></p>
+<pre><code class="language-python">import time
+
+def display_time( func) :
+    def wrapper (*args):
+        t1 = time. time()
+        result = func(*args)
+        t2 = time.time()
+        print (&quot;Total time: {:.4} s&quot;. format (t2 - t1))
+        return result 
+    return wrapper
+
+def is_prime (num):
+    if num &lt; 2:
+        return False 
+    elif num == 2:
+        return True else:
+    for i in range(2, num):
+        if num % i == 0:
+            return False
+        else:
+            return True
+
+@display_time
+def count_prime_nums (maxnum) :
+    count = 0
+    for i in range(2, maxnum) :
+        if is_prime(i):
+            count = count + 1
+    return count
+
+count = count_prime_nums (10000)
+print (count)
+
+</code></pre>
 
 
 
