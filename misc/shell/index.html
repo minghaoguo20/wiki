@@ -9,17 +9,17 @@
       
       
       
-        <link rel="prev" href="../prompt/">
+        <link rel="prev" href="../direction/">
       
       
-        <link rel="next" href="../software/">
+        <link rel="next" href="../..">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.14">
     
     
       
-        <title>code - wiki</title>
+        <title>shell - wiki</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mps" class="md-skip">
+        <a href="#server" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              code
+              shell
             
           </span>
         </div>
@@ -398,48 +398,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          code
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../code/" class="md-nav__link">
         code
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#mps" class="md-nav__link">
-    mps
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -477,11 +440,48 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../shell/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          shell
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         shell
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#server" class="md-nav__link">
+    server
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -533,8 +533,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mps" class="md-nav__link">
-    mps
+  <a href="#server" class="md-nav__link">
+    server
   </a>
   
 </li>
@@ -554,23 +554,20 @@
                   
 
 
-  <h1>code</h1>
+  <h1>shell</h1>
 
-<h2 id="mps">mps</h2>
-<p>use GPU in M chips</p>
-<pre><code class="language-python">def get_default_device():
-    &quot;&quot;&quot;
-    get the default device for training.
-    if using mac with M chips, return 'mps'
-    if using cuda, return 'cuda'
-    if using cpu, return 'cpu'
-    &quot;&quot;&quot;
-    if torch.cuda.is_available():
-        return 'cuda'
-    elif getattr(torch.backends, 'mps', None) is not None and torch.backends .mps.is_available():
-        return 'mps' 
-    else:
-        return 'cpu'
+<h2 id="server">server</h2>
+<p>run clash in a terminal</p>
+<pre><code class="language-shell">./clash-linux-amd64-v1.10.0 -f glados.yaml -d .
+source run_clash.sh
+</code></pre>
+<p>use proxy</p>
+<pre><code class="language-shell">git clone https://github.com/###### --config &quot;http.proxy=127.0.0.1:7890&quot;
+</code></pre>
+<p>set proxy</p>
+<pre><code class="language-shell">export http_proxy=&quot;127.0.0.1:7890&quot; 
+# wget, curl, git, ssh, etc.
+export http_proxy=&quot;&quot;
 </code></pre>
 
 
