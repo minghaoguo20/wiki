@@ -430,22 +430,9 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mac" class="md-nav__link">
-    Mac
-  </a>
-  
-    <nav class="md-nav" aria-label="Mac">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#scp" class="md-nav__link">
-    scp
+  <a href="#gpu-selection" class="md-nav__link">
+    gpu selection
   </a>
   
 </li>
@@ -587,22 +574,9 @@
   
 </li>
         
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mac" class="md-nav__link">
-    Mac
-  </a>
-  
-    <nav class="md-nav" aria-label="Mac">
-      <ul class="md-nav__list">
-        
           <li class="md-nav__item">
-  <a href="#scp" class="md-nav__link">
-    scp
+  <a href="#gpu-selection" class="md-nav__link">
+    gpu selection
   </a>
   
 </li>
@@ -651,11 +625,23 @@ source run_clash.sh
 # wget, curl, git, ssh, etc.
 export http_proxy=&quot;&quot;
 </code></pre>
-<h2 id="mac">Mac</h2>
-<h3 id="scp">scp</h3>
-<p><a href="https://www.runoob.com/linux/linux-comm-scp.html">scp</a></p>
-<p>local to remote</p>
-<pre><code class="language-shell">scp /home/space/music/1.mp3 root@www.runoob.com:/home/root/others/music
+<h3 id="gpu-selection">gpu selection</h3>
+<p><a href="https://stackoverflow.com/questions/39649102/how-do-i-select-which-gpu-to-run-a-job-on">link</a></p>
+<pre><code class="language-shell">export CUDA_VISIBLE_DEVICES=3
+CUDA_VISIBLE_DEVICES=3 ./cuda_executable
+
+````
+
+## Mac
+
+### scp
+
+[scp](https://www.runoob.com/linux/linux-comm-scp.html)
+
+local to remote
+
+```shell
+scp /home/space/music/1.mp3 root@www.runoob.com:/home/root/others/music
 </code></pre>
 <p>remote to local</p>
 <pre><code class="language-shell">scp root@www.runoob.com:/home/root/others/music /home/space/music/1.mp3 
