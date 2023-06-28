@@ -7,6 +7,8 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+        <meta name="author" content="Henry">
+      
       
       
         <link rel="prev" href="../../syntax/python/">
@@ -667,40 +669,40 @@
 <hr />
 <h3 id="ch-1">ch 1 样本空间与概率</h3>
 <p>概率论的若干性质</p>
-<p>$$
+<div class="arithmatex">\[
 P(A\cup B \cup C) = P(A) + P(A^c \cap B) + P(A^c \cap B^c \cap C)
-$$</p>
+\]</div>
 <p>条件概率
 $$
 P(A|B) = \frac{P(A\cap B)}{P(B)}
 $$</p>
 <p>全概率定理</p>
 <blockquote>
-<p>设$A_1,A_2,\cdots,A_n$是一组互不相容的事件，且$A_1\cup A_2\cup \cdots \cup A_n = S$，则对任一事件B，有</p>
+<p>设<span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span>是一组互不相容的事件，且<span class="arithmatex">\(A_1\cup A_2\cup \cdots \cup A_n = S\)</span>，则对任一事件B，有</p>
 </blockquote>
-<p>$$
-\begin{align<em>}
-P(B) = &amp; P(A_1)P(B|A_1) + P(A_2)P(B|A_2) + \cdots + P(A_n)P(B|A_n) \
+<div class="arithmatex">\[
+\begin{align*}
+P(B) = &amp; P(A_1)P(B|A_1) + P(A_2)P(B|A_2) + \cdots + P(A_n)P(B|A_n) \\
 = &amp; \sum_{i=1}^{n}P(A_i)P(B|A_i)
-\end{align</em>}
-$$</p>
+\end{align*}
+\]</div>
 <p>贝叶斯准则</p>
 <blockquote>
-<p>设$A_1,A_2,\cdots,A_n$是一组互不相容的事件，且$A_1\cup A_2\cup \cdots \cup A_n = S$，则对任一事件B，有</p>
+<p>设<span class="arithmatex">\(A_1,A_2,\cdots,A_n\)</span>是一组互不相容的事件，且<span class="arithmatex">\(A_1\cup A_2\cup \cdots \cup A_n = S\)</span>，则对任一事件B，有</p>
 </blockquote>
-<p>$$
-\begin{align<em>}
-P(A_i|B) = &amp; \frac{P(A_i)P(B|A_i)}{P(B)} \
+<div class="arithmatex">\[
+\begin{align*}
+P(A_i|B) = &amp; \frac{P(A_i)P(B|A_i)}{P(B)} \\
 = &amp; \frac{P(A_i)P(B|A_i)}{\sum_{j=1}^{n}P(A_j)P(B|A_j)}
-\end{align</em>}
-$$</p>
+\end{align*}
+\]</div>
 <p>独立性</p>
 <ul>
-<li>如果两个事件A和B相互独立，则有$P(A\cap B) = P(A)P(B)$<ul>
-<li>若B还满足$P(B)&gt;0$，则有$P(A|B) = P(A)$</li>
+<li>如果两个事件A和B相互独立，则有<span class="arithmatex">\(P(A\cap B) = P(A)P(B)\)</span><ul>
+<li>若B还满足<span class="arithmatex">\(P(B)&gt;0\)</span>，则有<span class="arithmatex">\(P(A|B) = P(A)\)</span></li>
 </ul>
 </li>
-<li>若A与B相互独立，则A与$B^c$相互独立</li>
+<li>若A与B相互独立，则A与<span class="arithmatex">\(B^c\)</span>相互独立</li>
 </ul>
 <hr />
 <h3 id="ch-2">ch 2 离散随机变量</h3>
@@ -745,6 +747,10 @@ $$</p>
     
     
       <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>
