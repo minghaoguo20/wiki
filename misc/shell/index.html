@@ -7,8 +7,6 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <meta name="author" content="Henry">
-      
       
       
         <link rel="prev" href="../../English/zahara/">
@@ -320,61 +318,12 @@
       
       
         <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-          math
+          English
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
         <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          math
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../math/probability/" class="md-nav__link">
-        probability
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-      
-      
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
-          English
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
-        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           English
         </label>
@@ -415,17 +364,17 @@
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
       
       
       
-        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
           misc
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
-        <label class="md-nav__title" for="__nav_5">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           misc
         </label>
@@ -484,6 +433,13 @@
           <li class="md-nav__item">
   <a href="#gpu-selection" class="md-nav__link">
     gpu selection
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zju-mirror" class="md-nav__link">
+    ZJU Mirror
   </a>
   
 </li>
@@ -666,6 +622,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#zju-mirror" class="md-nav__link">
+    ZJU Mirror
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -719,7 +682,7 @@
 <h3 id="proxy-glados">proxy-glados</h3>
 <p><a href="https://glados.rocks/console/terminal">glados</a></p>
 <p>run clash in a terminal</p>
-<pre><code class="language-shell">./clash-linux-amd64-v1.10.0 -f glados.yaml -d .
+<pre><code class="language-shell">cd /home/test/tool/clash
 source run_clash.sh
 </code></pre>
 <p>use proxy</p>
@@ -741,6 +704,25 @@ CUDA_VISIBLE_DEVICES=3 ./cuda_executable
 # specify more than one device
 export CUDA_VISIBLE_DEVICES=0,1
 CUDA_VISIBLE_DEVICES=0,1 ./cuda_executable
+</code></pre>
+<h3 id="zju-mirror">ZJU Mirror</h3>
+<blockquote>
+<ul>
+<li><a href="https://mirrors.zju.edu.cn/">ZJU Mirror 浙江大学开源软件镜像站</a></li>
+<li><a href="https://mirrors.zju.edu.cn/docs/pypi/">ZJU Mirror PyPi</a></li>
+</ul>
+<p>pypi 镜像目前仅为校内用户提供镜像服务。若您的网络环境处于校外， pip 的 HTTP(S) 请求将会被重定向（ 302 ）至清华 TUNA 镜像站。</p>
+</blockquote>
+<p>临时使用</p>
+<pre><code class="language-shell">pip install -i https://mirrors.zju.edu.cn/pypi/web/simple some-package
+# 注意，simple 不能少，若使用 http 镜像需要加上 --trusted-host mirrors.zju.edu.cn
+</code></pre>
+<p>设为默认</p>
+<pre><code class="language-shell">pip install pip -U # 升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置
+pip config set global.index-url https://mirrors.zju.edu.cn/pypi/web/simple
+</code></pre>
+<p>如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip ：</p>
+<pre><code class="language-shell">pip install -i https://mirrors.zju.edu.cn/pypi/web/simple pip -U
 </code></pre>
 <hr />
 <h2 id="mac">Mac</h2>
@@ -796,10 +778,6 @@ scp -P 922 remote@www.runoob.com:/usr/local/sin.sh /home/administrator
     
     
       <script src="../../assets/javascripts/bundle.b4d07000.min.js"></script>
-      
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
       
     
   </body>
