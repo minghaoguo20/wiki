@@ -724,6 +724,10 @@ pip config set global.index-url https://mirrors.zju.edu.cn/pypi/web/simple
 <p>如果您到 pip 默认源的网络连接较差，临时使用本镜像站来升级 pip ：</p>
 <pre><code class="language-shell">pip install -i https://mirrors.zju.edu.cn/pypi/web/simple pip -U
 </code></pre>
+<p>还原默认源</p>
+<pre><code class="language-shell">pip config edit --editor vim
+# 修改为: https://pypi.org/simple
+</code></pre>
 <hr />
 <h2 id="mac">Mac</h2>
 <h3 id="scp">scp</h3>
