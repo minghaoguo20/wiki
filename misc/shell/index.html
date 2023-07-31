@@ -438,8 +438,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#check-cuda-version" class="md-nav__link">
+    check cuda version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zju-mirror" class="md-nav__link">
     ZJU Mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-var" class="md-nav__link">
+    Environment Var
   </a>
   
 </li>
@@ -623,8 +637,22 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#check-cuda-version" class="md-nav__link">
+    check cuda version
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#zju-mirror" class="md-nav__link">
     ZJU Mirror
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-var" class="md-nav__link">
+    Environment Var
   </a>
   
 </li>
@@ -705,6 +733,10 @@ CUDA_VISIBLE_DEVICES=3 ./cuda_executable
 export CUDA_VISIBLE_DEVICES=0,1
 CUDA_VISIBLE_DEVICES=0,1 ./cuda_executable
 </code></pre>
+<h3 id="check-cuda-version">check cuda version</h3>
+<pre><code class="language-shell">cat /usr/local/cuda/version.json
+cat /usr/local/cuda/version.txt
+</code></pre>
 <h3 id="zju-mirror">ZJU Mirror</h3>
 <blockquote>
 <ul>
@@ -727,6 +759,9 @@ pip config set global.index-url https://mirrors.zju.edu.cn/pypi/web/simple
 <p>还原默认源</p>
 <pre><code class="language-shell">pip config edit --editor vim
 # 修改为: https://pypi.org/simple
+</code></pre>
+<h3 id="environment-var">Environment Var</h3>
+<pre><code class="language-shell">vim ~/.bashrc
 </code></pre>
 <hr />
 <h2 id="mac">Mac</h2>
